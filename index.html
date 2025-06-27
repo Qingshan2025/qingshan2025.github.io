@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>青岛全佳体育科技有限公司</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fff6e5 0%, #ffe0b2 100%);
+      color: #222;
+    }
+    header {
+      background: #ff8800;
+      color: #fff;
+      padding: 12px 0 8px 0;
+      text-align: left;
+      border-radius: 0 0 24px 24px;
+      box-shadow: 0 4px 24px rgba(255,136,0,0.10);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      margin: 0 0 0 32px;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+    header h1 img {
+      height: 24px !important;
+      margin-right: 8px;
+    }
+    .carousel {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto 24px auto;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(255,136,0,0.10);
+      background: #fff;
+      transition: box-shadow 0.2s;
+      display: block;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+      height: 442px;
+      object-fit: cover;
+      transition: opacity 0.5s;
+    }
+    .carousel img.active {
+      display: block;
+      opacity: 1;
+    }
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .carousel-controls button {
+      background: rgba(255,136,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      padding: 0 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(255,136,0,0.10);
+    }
+    .carousel-controls button:hover {
+      background: #ff8800;
+      box-shadow: 0 4px 16px rgba(255,136,0,0.18);
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 14px 0 0 0;
+    }
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ffd699;
+      border: 2px solid #ff8800;
+      cursor: pointer;
+      transition: background 0.2s, border 0.2s;
+    }
+    .carousel-dot.active {
+      background: #ff8800;
+      border: 2px solid #ff8800;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(255,136,0,0.10);
+      padding: 40px 32px 32px 32px;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+      transition: box-shadow 0.2s;
+    }
+    main:hover {
+      box-shadow: 0 8px 32px rgba(255,136,0,0.16);
+    }
+    section {
+      margin-bottom: 36px;
+    }
+    h2 {
+      color: #ff8800;
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    ul li {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      position: relative;
+    }
+    ul li::before {
+      content: "• ";
+      color: #ff8800;
+      font-size: 1.2em;
+      position: absolute;
+      left: -18px;
+      top: 0;
+    }
+    .contact {
+      background: #fff6e5;
+      padding: 18px 20px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      box-shadow: 0 2px 8px rgba(255,136,0,0.06);
+      border-left: 4px solid #ff8800;
+      color: #333;
+    }
+    @media (max-width: 900px) {
+      main, .carousel {
+        max-width: 98vw;
+        width: 100%;
+      }
+    }
+    @media (max-width: 600px) {
+      .carousel img {
+        height: 234px;
+      }
+      main {
+        padding: 16px 4px;
+      }
+      header {
+        padding: 20px 0 10px 0;
+        border-radius: 0 0 14px 14px;
+      }
+      .carousel {
+        border-radius: 10px;
+      }
+      header h1 {
+        margin-left: 10px;
+        font-size: 0.65rem;
+      }
+      header h1 img {
+        height: 14px !important;
+        margin-right: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="images/logo.png" alt="LOGO" style="height:40px;vertical-align:middle;margin-right:12px;"><span style="color:#112238;">青岛全佳体育科技有限公司</span></h1>
+  </header>
+  <div class="carousel" id="carousel">
+    <!-- 图片1：banner1.jpg -->
+    <img src="images/banner1.jpg" alt="公司轮播图1" class="active">
+    <!-- 图片2：banner2.jpg -->
+    <img src="images/banner2.jpg" alt="公司轮播图2">
+    <!-- 图片3：banner3.jpg -->
+    <img src="images/banner3.jpg" alt="公司轮播图3">
+    <div class="carousel-controls">
+      <button id="prevBtn" aria-label="上一张">&#8592;</button>
+      <button id="nextBtn" aria-label="下一张">&#8594;</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+  <main>
+    <section>
+      <h2>公司简介</h2>
+      <p>青岛全佳体育科技有限公司成立于2023年，专注于体育科技领域，致力于为客户提供高质量的体育装备、运动训练及相关技术服务。我们秉承"创新、专业、服务至上"的理念，助力体育事业发展。</p>
+    </section>
+    <section>
+      <h2>主营业务</h2>
+      <ul>
+        <li>体育装备研发与销售</li>
+        <li>运动训练与培训</li>
+        <li>体育场馆智能化解决方案</li>
+        <li>体育赛事策划与执行</li>
+      </ul>
+    </section>
+    <section>
+      <h2>联系方式</h2>
+      <div class="contact">
+        地址：青岛市李沧区北园路7号院内南侧办公楼<br>
+        电话：18801195251<br>
+        邮箱：qjspot@163.com; songqingquan@athlimate.com
+      </div>
+    </section>
+  </main>
+  <script>
+    // 轮播图逻辑+圆点指示器
+    const images = document.querySelectorAll('#carousel img');
+    const dotsContainer = document.getElementById('carouselDots');
+    let current = 0;
+    // 创建圆点
+    images.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => {
+        current = i;
+        showImage(current);
+        resetInterval();
+      };
+      dotsContainer.appendChild(dot);
+    });
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+    function showImage(idx) {
+      images.forEach((img, i) => img.classList.toggle('active', i === idx));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+    }
+    document.getElementById('prevBtn').onclick = () => {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current);
+      resetInterval();
+    };
+    document.getElementById('nextBtn').onclick = () => {
+      current = (current + 1) % images.length;
+      showImage(current);
+      resetInterval();
+    };
+    let interval = setInterval(() => {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }, 4000);
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(() => {
+        current = (current + 1) % images.length;
+        showImage(current);
+      }, 4000);
+    }
+  </script>
+</body>
+</html> 
