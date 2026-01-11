@@ -192,6 +192,15 @@ body {
 .feature-icon {
     font-size: 40px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .feature-card h3 {
