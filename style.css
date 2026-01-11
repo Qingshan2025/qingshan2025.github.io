@@ -60,6 +60,16 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .nav-links {
@@ -114,7 +124,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('assets/hero-bg.png') center/cover no-repeat;
+    background: url('assets/hero-bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
@@ -316,6 +326,22 @@ body {
     text-align: center;
     color: var(--text-secondary);
     font-size: 13px;
+}
+
+.icp-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.icp-info a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.icp-info a:hover {
+    color: white;
 }
 
 /* Mobile Responsive */
