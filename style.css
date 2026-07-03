@@ -153,13 +153,16 @@ body {
     background: url('assets/hero-bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     color: white;
     padding-top: var(--nav-height);
 }
 
 .hero .container {
-    max-width: min(96vw, 1600px);
+    width: 100%;
+    max-width: min(98vw, 1600px);
+    text-align: center;
 }
 
 .hero-overlay {
@@ -174,14 +177,14 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: min(96vw, 1600px);
-    text-align: left;
+    width: 100%;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: clamp(32px, 2.6vw, 52px);
+    font-size: clamp(22px, 2.2vw, 46px);
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 0;
     letter-spacing: -1px;
     white-space: nowrap;
@@ -386,9 +389,14 @@ body {
         max-width: 110px;
     }
 
+    .hero .container {
+        max-width: 100%;
+    }
+
     .hero h1 {
-        font-size: 40px;
+        font-size: clamp(28px, 8vw, 40px);
         white-space: normal;
+        line-height: 1.2;
     }
 
     .science-content {
