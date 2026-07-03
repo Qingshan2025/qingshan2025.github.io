@@ -459,6 +459,32 @@ function saveLanguage(language) {
     }
 }
 
+const DESKTOP_BREAKPOINT = 769;
+const HERO_TITLE_MAX_FONT = 46;
+const HERO_TITLE_MIN_FONT = 18;
+
+function fitHeroTitle() {
+    const heroTitle = document.querySelector('.hero h1');
+    const heroContent = document.querySelector('.hero-content');
+
+    if (!heroTitle || !heroContent) {
+        return;
+    }
+
+    if (window.innerWidth < DESKTOP_BREAKPOINT) {
+        heroTitle.style.fontSize = '';
+        return;
+    }
+
+    heroTitle.style.fontSize = `${HERO_TITLE_MAX_FONT}px`;
+
+    let fontSize = HERO_TITLE_MAX_FONT;
+    while (heroTitle.scrollWidth > heroContent.clientWidth && fontSize > HERO_TITLE_MIN_FONT) {
+        fontSize -= 1;
+        heroTitle.style.fontSize = `${fontSize}px`;
+    }
+}
+
 function applyLanguage(language) {
     const selectedLanguage = translations[language] ? language : 'en';
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -487,6 +513,7 @@ function applyLanguage(language) {
     });
 
     saveLanguage(selectedLanguage);
+    requestAnimationFrame(fitHeroTitle);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -561,4 +588,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.feature-card, .science-content').forEach(el => {
         observer.observe(el);
     });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(fitHeroTitle, 100);
+    });
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fitHeroTitle);
+    }
+
+    window.addEventListener('load', fitHeroTitle);
 });
