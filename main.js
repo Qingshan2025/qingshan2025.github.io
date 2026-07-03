@@ -443,6 +443,22 @@ function getTranslation(language, key) {
     return key.split('.').reduce((value, part) => value && value[part], translations[language]);
 }
 
+function getSavedLanguage() {
+    try {
+        return localStorage.getItem('athlimate-language');
+    } catch (error) {
+        return null;
+    }
+}
+
+function saveLanguage(language) {
+    try {
+        localStorage.setItem('athlimate-language', language);
+    } catch (error) {
+        // Language switching should still work even when storage is unavailable.
+    }
+}
+
 function applyLanguage(language) {
     const selectedLanguage = translations[language] ? language : 'en';
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -470,7 +486,7 @@ function applyLanguage(language) {
         }
     });
 
-    localStorage.setItem('athlimate-language', selectedLanguage);
+    saveLanguage(selectedLanguage);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -480,13 +496,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageSelect = document.getElementById('language-select');
 
     if (languageSelect) {
-        const savedLanguage = localStorage.getItem('athlimate-language') || 'en';
+        const savedLanguage = getSavedLanguage() || 'en';
+        const updateLanguage = () => applyLanguage(languageSelect.value);
+
         languageSelect.value = translations[savedLanguage] ? savedLanguage : 'en';
         applyLanguage(languageSelect.value);
 
-        languageSelect.addEventListener('change', () => {
-            applyLanguage(languageSelect.value);
-        });
+        languageSelect.addEventListener('change', updateLanguage);
+        languageSelect.addEventListener('input', updateLanguage);
     }
 
     // Navbar scroll effect

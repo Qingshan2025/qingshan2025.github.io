@@ -158,6 +158,10 @@ body {
     padding-top: var(--nav-height);
 }
 
+.hero .container {
+    max-width: min(96vw, 1600px);
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -170,16 +174,16 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1000px;
+    max-width: min(96vw, 1600px);
     text-align: left;
 }
 
 .hero h1 {
-    font-size: 56px;
+    font-size: clamp(32px, 2.6vw, 52px);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 0;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     white-space: nowrap;
 }
 
