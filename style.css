@@ -49,9 +49,9 @@ body {
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 24px;
 }
 
 .logo {
@@ -74,6 +74,8 @@ body {
 
 .nav-links {
     display: flex;
+    flex: 1;
+    justify-content: center;
     list-style: none;
     gap: 32px;
 }
@@ -94,6 +96,8 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
     color: var(--text-secondary);
     font-size: 14px;
     font-weight: 500;
@@ -235,7 +239,7 @@ body {
     border: 1px solid rgba(0, 122, 255, 0.1);
     transition: var(--transition);
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 22px;
     box-shadow: 0 16px 36px rgba(28, 28, 30, 0.06);
 }
@@ -255,11 +259,13 @@ body {
 
 .feature-image {
     flex: 0 0 160px;
+    align-self: stretch;
 }
 
 .feature-image img {
     width: 160px;
-    height: 124px;
+    height: 100%;
+    min-height: 100%;
     border-radius: 22px;
     object-fit: cover;
     display: block;
@@ -417,12 +423,11 @@ body {
     }
 
     .feature-image {
-        flex-basis: 132px;
+        flex: 0 0 132px;
     }
 
     .feature-image img {
         width: 132px;
-        height: 108px;
     }
 }
 
