@@ -90,6 +90,32 @@ body {
     color: var(--primary-color);
 }
 
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.language-switcher select {
+    padding: 7px 12px;
+    border: 1px solid rgba(0, 122, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+}
+
+.language-switcher select:hover,
+.language-switcher select:focus {
+    border-color: var(--primary-color);
+}
+
 /* Buttons */
 .btn {
     display: inline-flex;
@@ -346,6 +372,14 @@ body {
     .nav-links,
     .download-btn {
         display: none;
+    }
+
+    .language-switcher span {
+        display: none;
+    }
+
+    .language-switcher select {
+        max-width: 110px;
     }
 
     .hero h1 {
