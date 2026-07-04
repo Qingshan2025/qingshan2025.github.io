@@ -49,9 +49,17 @@ body {
 
 .navbar .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-right: 16px;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
     gap: 24px;
+    margin-left: auto;
 }
 
 .logo {
@@ -74,8 +82,6 @@ body {
 
 .nav-links {
     display: flex;
-    flex: 1;
-    justify-content: center;
     list-style: none;
     gap: 32px;
 }
@@ -96,8 +102,6 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-left: auto;
-    flex-shrink: 0;
     color: var(--text-secondary);
     font-size: 14px;
     font-weight: 500;
@@ -231,7 +235,7 @@ body {
 
 .feature-card {
     flex: 1;
-    min-height: 188px;
+    min-height: 204px;
     background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
     padding: 18px;
     border-radius: 28px;
@@ -239,7 +243,7 @@ body {
     border: 1px solid rgba(0, 122, 255, 0.1);
     transition: var(--transition);
     display: flex;
-    align-items: stretch;
+    align-items: center;
     gap: 22px;
     box-shadow: 0 16px 36px rgba(28, 28, 30, 0.06);
 }
@@ -258,14 +262,13 @@ body {
 }
 
 .feature-image {
-    flex: 0 0 160px;
-    align-self: stretch;
+    flex: 0 0 168px;
 }
 
 .feature-image img {
-    width: 160px;
-    height: 100%;
-    min-height: 100%;
+    width: 168px;
+    height: 168px;
+    aspect-ratio: 1 / 1;
     border-radius: 22px;
     object-fit: cover;
     display: block;
@@ -387,12 +390,16 @@ body {
         display: none;
     }
 
+    .language-switcher {
+        margin-right: -4px;
+    }
+
     .language-switcher span {
         display: none;
     }
 
     .language-switcher select {
-        max-width: 110px;
+        max-width: 118px;
     }
 
     .hero .container {
@@ -416,6 +423,7 @@ body {
     .feature-card,
     .feature-card-wide {
         flex: 1;
+        align-items: flex-start;
     }
 
     .feature-card:nth-child(even) .feature-image {
@@ -423,11 +431,12 @@ body {
     }
 
     .feature-image {
-        flex: 0 0 132px;
+        flex: 0 0 148px;
     }
 
     .feature-image img {
-        width: 132px;
+        width: 148px;
+        height: 148px;
     }
 }
 
