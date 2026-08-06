@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邀请你使用 AthliMate</title>
+  <meta name="description" content="注册可获得15天PRO会员">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="邀请你使用 AthliMate">
+  <meta property="og:description" content="注册可获得15天PRO会员">
+  <meta property="og:image" content="https://athlimate.com/invite-og.png">
+  <meta property="og:url" content="https://athlimate.com/invite.html">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: linear-gradient(160deg, #f5f7fa 0%, #e8ecf1 100%);
+      color: #1a1a1a;
+    }
+    .card {
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 28px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+    .logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #007AFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .hint {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="invite-og.png" alt="AthliMate">
+    <h1>邀请你使用 AthliMate</h1>
+    <p id="desc">注册可获得15天PRO会员</p>
+    <a id="openBtn" class="btn" href="https://apps.apple.com/app/id6754246554">打开 AthliMate</a>
+    <p class="hint" id="hint"></p>
+  </div>
+  <script>
+    (function () {
+      var APP_STORE = "https://apps.apple.com/app/id6754246554";
+      var ONE_LINK_BASE = "https://link.athlimate.com/m80G";
+      var params = new URLSearchParams(window.location.search);
+      var raw = (params.get("code") || "").trim().toUpperCase();
+      var code = /^[A-Z0-9]{8}$/.test(raw) ? raw : null;
+      var btn = document.getElementById("openBtn");
+      var hint = document.getElementById("hint");
+
+      function buildOneLink(inviteCode) {
+        var q = new URLSearchParams({
+          pid: "af_app_invites",
+          c: "user_invite",
+          af_channel: "app_share",
+          deep_link_value: "referral",
+          deep_link_sub1: inviteCode
+        });
+        return ONE_LINK_BASE + "?" + q.toString();
+      }
+
+      function go(target) {
+        window.location.replace(target);
+      }
+
+      if (code) {
+        var target = buildOneLink(code);
+        btn.href = target;
+        hint.textContent = "正在跳转…";
+        setTimeout(function () { go(target); }, 400);
+      } else {
+        btn.href = APP_STORE;
+        hint.textContent = "邀请码无效，请从 App 内重新分享链接";
+      }
+    })();
+  </script>
+</body>
+</html>
