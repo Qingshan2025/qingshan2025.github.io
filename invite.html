@@ -43,26 +43,46 @@
       font-weight: 600;
       margin-bottom: 8px;
     }
-    p {
+    .desc {
       font-size: 15px;
       color: #666;
       line-height: 1.5;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
     .btn {
-      display: inline-block;
+      display: block;
+      width: 100%;
       padding: 14px 32px;
-      background: #007AFF;
-      color: #fff;
-      text-decoration: none;
       border-radius: 12px;
       font-size: 16px;
       font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: #007AFF;
+      color: #fff;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #007AFF;
+      border: 1px solid #007AFF;
+    }
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: default;
     }
     .hint {
       margin-top: 16px;
       font-size: 13px;
       color: #999;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -70,8 +90,11 @@
   <div class="card">
     <img class="logo" src="invite-og.png" alt="AthliMate">
     <h1>邀请你使用 AthliMate</h1>
-    <p id="desc">注册可获得15天PRO会员</p>
-    <a id="openBtn" class="btn" href="https://apps.apple.com/app/id6754246554">打开 AthliMate</a>
+    <p class="desc" id="desc">注册可获得15天PRO会员</p>
+    <div class="actions">
+      <button type="button" class="btn btn-primary" id="openBtn">打开 AthliMate</button>
+      <a class="btn btn-secondary" id="downloadBtn" href="https://apps.apple.com/app/id6754246554">下载 App</a>
+    </div>
     <p class="hint" id="hint"></p>
   </div>
   <script>
@@ -81,8 +104,15 @@
       var params = new URLSearchParams(window.location.search);
       var raw = (params.get("code") || "").trim().toUpperCase();
       var code = /^[A-Z0-9]{8}$/.test(raw) ? raw : null;
-      var btn = document.getElementById("openBtn");
+
+      var openBtn = document.getElementById("openBtn");
+      var downloadBtn = document.getElementById("downloadBtn");
       var hint = document.getElementById("hint");
+      var appPossiblyOpened = false;
+
+      function schemeUrl(inviteCode) {
+        return "athlimate://invite?code=" + encodeURIComponent(inviteCode);
+      }
 
       function writeClipboard(text) {
         if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -105,24 +135,44 @@
         document.body.removeChild(ta);
       }
 
-      function tryOpenApp(inviteCode) {
-        var schemeUrl = "athlimate://invite?code=" + encodeURIComponent(inviteCode);
-        window.location.href = schemeUrl;
+      function markAppPossiblyOpened() {
+        if (appPossiblyOpened) return;
+        appPossiblyOpened = true;
+        hint.textContent = "已尝试打开 App，请在 App 内完成注册（邀请码将自动识别）。";
       }
 
-      function goAppStore() {
-        window.location.replace(APP_STORE);
+      function tryOpenApp() {
+        if (!code) return;
+        window.location.href = schemeUrl(code);
       }
+
+      function prepareAndOpen() {
+        if (!code) return;
+        writeClipboard(PASTEBOARD_PREFIX + code).finally(function () {
+          tryOpenApp();
+          hint.textContent = "正在打开 App…若未跳转，请点「打开 AthliMate」。";
+        });
+      }
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "hidden") markAppPossiblyOpened();
+      });
+      window.addEventListener("pagehide", markAppPossiblyOpened);
+      window.addEventListener("blur", markAppPossiblyOpened);
+
+      openBtn.addEventListener("click", prepareAndOpen);
+      downloadBtn.href = APP_STORE;
 
       if (code) {
-        btn.href = APP_STORE;
-        hint.textContent = "正在打开…";
-        writeClipboard(PASTEBOARD_PREFIX + code).finally(function () {
-          tryOpenApp(code);
-          setTimeout(goAppStore, 1200);
-        });
+        prepareAndOpen();
+        setTimeout(function () {
+          if (!appPossiblyOpened) {
+            hint.textContent = "若未自动打开，请点「打开 AthliMate」；未安装请点「下载 App」。";
+          }
+        }, 1500);
       } else {
-        btn.href = APP_STORE;
+        openBtn.disabled = true;
+        openBtn.textContent = "邀请码无效";
         hint.textContent = "邀请码无效，请从 App 内重新分享链接";
       }
     })();
