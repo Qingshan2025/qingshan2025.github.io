@@ -77,33 +77,50 @@
   <script>
     (function () {
       var APP_STORE = "https://apps.apple.com/app/id6754246554";
-      var ONE_LINK_BASE = "https://link.athlimate.com/m80G";
+      var PASTEBOARD_PREFIX = "athlimate_invite:";
       var params = new URLSearchParams(window.location.search);
       var raw = (params.get("code") || "").trim().toUpperCase();
       var code = /^[A-Z0-9]{8}$/.test(raw) ? raw : null;
       var btn = document.getElementById("openBtn");
       var hint = document.getElementById("hint");
 
-      function buildOneLink(inviteCode) {
-        var q = new URLSearchParams({
-          pid: "af_app_invites",
-          c: "user_invite",
-          af_channel: "app_share",
-          deep_link_value: "referral",
-          deep_link_sub1: inviteCode
-        });
-        return ONE_LINK_BASE + "?" + q.toString();
+      function writeClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          return navigator.clipboard.writeText(text).catch(function () {
+            fallbackCopy(text);
+          });
+        }
+        fallbackCopy(text);
+        return Promise.resolve();
       }
 
-      function go(target) {
-        window.location.replace(target);
+      function fallbackCopy(text) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+
+      function tryOpenApp(inviteCode) {
+        var schemeUrl = "athlimate://invite?code=" + encodeURIComponent(inviteCode);
+        window.location.href = schemeUrl;
+      }
+
+      function goAppStore() {
+        window.location.replace(APP_STORE);
       }
 
       if (code) {
-        var target = buildOneLink(code);
-        btn.href = target;
-        hint.textContent = "正在跳转…";
-        setTimeout(function () { go(target); }, 400);
+        btn.href = APP_STORE;
+        hint.textContent = "正在打开…";
+        writeClipboard(PASTEBOARD_PREFIX + code).finally(function () {
+          tryOpenApp(code);
+          setTimeout(goAppStore, 1200);
+        });
       } else {
         btn.href = APP_STORE;
         hint.textContent = "邀请码无效，请从 App 内重新分享链接";
