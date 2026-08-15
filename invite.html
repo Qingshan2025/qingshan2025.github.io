@@ -138,7 +138,7 @@
       function markAppPossiblyOpened() {
         if (appPossiblyOpened) return;
         appPossiblyOpened = true;
-        hint.textContent = "已尝试打开 App，请在 App 内完成注册（邀请码将自动识别）。";
+        hint.textContent = "已打开 App，请在 App 内完成注册（邀请码将自动识别）。";
       }
 
       function tryOpenApp() {
@@ -146,11 +146,16 @@
         window.location.href = schemeUrl(code);
       }
 
+      function writeInviteToClipboard() {
+        if (!code) return Promise.resolve();
+        return writeClipboard(PASTEBOARD_PREFIX + code);
+      }
+
       function prepareAndOpen() {
         if (!code) return;
-        writeClipboard(PASTEBOARD_PREFIX + code).finally(function () {
+        writeInviteToClipboard().finally(function () {
           tryOpenApp();
-          hint.textContent = "正在打开 App…若未跳转，请点「打开 AthliMate」。";
+          hint.textContent = "正在打开 App…若未打开，请确认已安装，或点击「下载 App」。";
         });
       }
 
@@ -161,15 +166,14 @@
       window.addEventListener("blur", markAppPossiblyOpened);
 
       openBtn.addEventListener("click", prepareAndOpen);
+      downloadBtn.addEventListener("click", function () {
+        writeInviteToClipboard();
+      });
       downloadBtn.href = APP_STORE;
 
       if (code) {
-        prepareAndOpen();
-        setTimeout(function () {
-          if (!appPossiblyOpened) {
-            hint.textContent = "请使用浏览器打开本页面，未安装请先点「下载 App」。";
-          }
-        }, 1500);
+        writeInviteToClipboard();
+        hint.textContent = "已安装请点「打开 AthliMate」，未安装请先点「下载 App」。";
       } else {
         openBtn.disabled = true;
         openBtn.textContent = "邀请码无效";
