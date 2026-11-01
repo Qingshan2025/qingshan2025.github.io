@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - Athlimate</title>
-    <meta name="description" content="Athlimate 隐私政策。我们尊重并保护您的隐私。">
+    <title>Privacy Policy - Athlimate</title>
+    <meta name="description" content="Athlimate Privacy Policy. We respect and protect your privacy.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -18,14 +18,14 @@
                 <img src="assets/logo1024.png" alt="Athlimate Logo" class="nav-logo">
                 Athlimate
             </a>
-            <a href="index.html" class="btn btn-primary">返回首页</a>
+            <a href="index.html" class="btn btn-primary">Back to home</a>
         </div>
     </nav>
 
     <main class="policy-page">
         <div class="container">
             <div id="content" class="markdown-body">
-                正在加载隐私政策...
+                Loading the privacy policy...
             </div>
         </div>
     </main>
@@ -37,15 +37,20 @@
     </footer>
 
     <script>
-        fetch('PrivacyPolicy.md')
-            .then(response => response.text())
-            .then(text => {
-                document.getElementById('content').innerHTML = marked.parse(text);
-            })
-            .catch(err => {
-                document.getElementById('content').innerHTML = '无法加载隐私政策文件。';
+        loadLegalDocument('PrivacyPolicy.en.md', 'Loading the privacy policy...', 'Unable to load the privacy policy.');
+
+        async function loadLegalDocument(file, loadingText, failureText) {
+            const content = document.getElementById('content');
+            content.textContent = loadingText;
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error('missing');
+                content.innerHTML = marked.parse(await response.text());
+            } catch (err) {
+                content.textContent = failureText;
                 console.error(err);
-            });
+            }
+        }
     </script>
 </body>
 
