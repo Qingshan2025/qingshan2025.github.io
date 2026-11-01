@@ -274,7 +274,7 @@ We promise to store your personal information for a reasonably necessary period,
 
 ## 11. How to contact us
 
-If you have any questions, comments, or suggestions about this Privacy Policy or matters related to your personal information, please email qjspot@163.com, or contact us through feedback in the AthliMate App and other channels. We will respond to your questions, comments, or suggestions in a timely manner.
+If you have any questions, comments, or suggestions about this Privacy Policy or matters related to your personal information, please email athlimate@gmail.com, or contact us through feedback in the AthliMate App and other channels. We will respond to your questions, comments, or suggestions in a timely manner.
 
 ---
 **Qingdao Quanjia Sports Technology Co., Ltd.**

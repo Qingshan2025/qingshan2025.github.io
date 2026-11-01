@@ -64,7 +64,7 @@ Minors under the age of 18 and other persons without full capacity for civil con
 
 5.2 Account and password security
 5.2.1 AthliMate specifically reminds you to protect your account and password properly and never disclose them to others. You are responsible for all activities under your account and password (including but not limited to information disclosure, posting, clicking to agree online, submitting various rules and agreements, renewing agreements, or purchasing services). AthliMate is not responsible for any loss caused by your failure to comply with this clause.
-5.2.2 If you discover that anyone is using your account and password without authorization, you must notify AthliMate immediately (you may email qjspot@163.com). You understand and agree that AthliMate needs a reasonable time to act on your request and is not responsible for any adverse consequences that arose before it took action.
+5.2.2 If you discover that anyone is using your account and password without authorization, you must notify AthliMate immediately (you may email athlimate@gmail.com). You understand and agree that AthliMate needs a reasonable time to act on your request and is not responsible for any adverse consequences that arose before it took action.
 5.2.3 If your account is stolen or lost because of a malicious attack by another person, your own reasons, or other force majeure, you are responsible, and AthliMate is not responsible.
 
 5.3 Nickname rules

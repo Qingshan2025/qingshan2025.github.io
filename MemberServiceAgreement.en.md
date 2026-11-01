@@ -174,7 +174,7 @@ The content of such notices may have a material favorable or unfavorable effect 
 
 If you have any question while using this Agreement or membership services (including inquiries and complaints), AthliMate provides several feedback channels and hopes to provide you with a satisfactory solution:
 1. Online customer service and other online feedback channels: you can obtain customer-service contact details in the AthliMate APP or submit feedback online;
-2. Email: you can email qjspot@163.com to contact AthliMate;
+2. Email: you can email athlimate@gmail.com to contact AthliMate;
 3. Other methods: other feedback channels provided by AthliMate.
 We will reply to you as soon as possible after receiving your feedback.
 

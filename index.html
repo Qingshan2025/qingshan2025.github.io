@@ -9,173 +9,173 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="assets/logo1024.png" alt="Athlimate Logo" class="nav-logo">
-                Athlimate
-            </a>
-            <div class="navbar-actions">
-                <ul class="nav-links">
-                    <li><a href="#features" data-i18n="nav.features">Features</a></li>
-                    <li><a href="#science" data-i18n="nav.science">Science</a></li>
-                    <li><a href="#about" data-i18n="nav.about">About</a></li>
-                </ul>
-                <label class="language-switcher" for="language-select">
-                    <span data-i18n="language.label">Language</span>
-                    <select id="language-select" aria-label="Language">
-                        <option value="en">🇺🇸 English</option>
-                        <option value="zh">🇨🇳 中文</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="ja">🇯🇵 日本語</option>
-                        <option value="ko">🇰🇷 한국어</option>
-                    </select>
-                </label>
-                <div class="menu-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body data-page="home">
+    <div id="site-nav"></div>
 
     <header class="hero">
-        <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="fade-in" data-i18n="hero.title">AI Fitness Testing and Training Assistant in Your Pocket</h1>
+            <h1 data-i18n="hero.title">AI Fitness Testing and Training Assistant in Your Pocket</h1>
+            <p class="hero-lead" data-i18n="science.text">Athlimate combines computer vision with sports biomechanics algorithms. With only a phone, it automatically recognizes the body and equipment, completes fitness tests quickly, and generates personalized training plans, making once-expensive lab-level testing available anytime, anywhere.</p>
+            <a class="btn btn-primary btn-large" href="https://apps.apple.com/app/id6754246554" data-i18n="nav.download">Download</a>
         </div>
     </header>
 
-    <section id="features" class="features section">
-        <div class="container">
-            <h2 class="section-title" data-i18n="features.title">Core Features</h2>
-            <div class="feature-list">
-                <div class="feature-row">
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/jump.jpg" alt="Jump Testing" data-i18n-alt="features.jump.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.jump.title">AI Automatic Real-Time Jump Testing</h3>
-                            <p data-i18n="features.jump.text">Use millisecond-level AI recognition through your phone camera to automatically measure jump height and explosive power.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/barbell.jpg" alt="Barbell Monitoring" data-i18n-alt="features.barbell.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.barbell.title">AI Automatic Real-Time Barbell Performance Monitoring</h3>
-                            <p data-i18n="features.barbell.text">Automatically track barbell path with your phone camera, monitor bar speed in real time, and calculate 1RM accurately with the force-velocity method.</p>
-                        </div>
-                    </div>
+    <main class="stories">
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.jump.title">AI Automatic Real-Time Jump Testing</h2>
+                    <p data-i18n="features.jump.text">Use millisecond-level AI recognition through your phone camera to automatically measure jump height and explosive power.</p>
+                    <a class="story-link" href="jump.html" data-i18n="nav.learn">Learn more</a>
                 </div>
-                <div class="feature-row">
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/posture.jpg" alt="Posture Assessment" data-i18n-alt="features.posture.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.posture.title">AI Smart Posture Assessment</h3>
-                            <p data-i18n="features.posture.text">Take a photo to receive a detailed quantitative posture report that accurately identifies posture abnormalities.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/sprint.jpg" alt="100m Sprint Split Timing" data-i18n-alt="features.sprint.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.sprint.title">100m Sprint Split Timing</h3>
-                            <p data-i18n="features.sprint.text">Automatically record start, drive, and sprint phases, clearly breaking down speed changes and room for improvement in each segment.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-row">
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/AIplan.jpg" alt="AI Personalized Training Plans" data-i18n-alt="features.plan.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.plan.title">AI-Generated Personalized Training Plans</h3>
-                            <p data-i18n="features.plan.text">Combine test data, training goals, and recovery status to intelligently generate phased training plans that fit each athlete's rhythm.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/fitness.jpg" alt="Fitness Assessment" data-i18n-alt="features.fitness.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.fitness.title">Sport-Specific Fitness Testing and Assessment</h3>
-                            <p data-i18n="features.fitness.text">Digitally track general and sport-specific fitness from every angle, making each hard-earned improvement visible.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-row">
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/deficit.jpg" alt="Strength Deficit" data-i18n-alt="features.deficit.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.deficit.title">Strength Deficit Analysis</h3>
-                            <p data-i18n="features.deficit.text">Calculate eccentric utilization ratio (EUR) and dynamic strength index (DSI) to quantify strength gaps and guide targeted training.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/fatigue.jpg" alt="Fatigue Monitoring" data-i18n-alt="features.fatigue.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.fatigue.title">Sports Fatigue Monitoring</h3>
-                            <p data-i18n="features.fatigue.text">Identify nervous system and skeletal muscle fatigue through multidimensional data, helping adjust training load and prevent injuries.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-row">
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/trend.jpg" alt="Trend Analysis" data-i18n-alt="features.trend.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.trend.title">Trend Analysis</h3>
-                            <p data-i18n="features.trend.text">Track performance trends across dimensions and use periodic curves to identify breakthroughs and plateaus clearly.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-image"><img src="assets/coach.jpg" alt="Coach Mode" data-i18n-alt="features.coach.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.coach.title">Professional Coach Mode</h3>
-                            <p data-i18n="features.coach.text">Support multi-athlete management, monitor team status in real time, and bring scientific coaching into a digital workflow.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-row">
-                    <div class="feature-card feature-card-wide">
-                        <div class="feature-image"><img src="assets/report.jpg" alt="Report Generation" data-i18n-alt="features.report.alt"></div>
-                        <div class="feature-content">
-                            <h3 data-i18n="features.report.title">One-Tap Report Generation</h3>
-                            <p data-i18n="features.report.text">Quickly export test records and professional performance reports, shareable as PDFs to improve communication efficiency.</p>
-                        </div>
-                    </div>
+                <div class="story-media">
+                    <img src="assets/jump.jpg" alt="Jump Testing" data-i18n-alt="features.jump.alt">
                 </div>
             </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.barbell.title">AI Automatic Real-Time Barbell Performance Monitoring</h2>
+                    <p data-i18n="features.barbell.text">Automatically track barbell path with your phone camera, monitor bar speed in real time, and calculate 1RM accurately with the force-velocity method.</p>
+                    <a class="story-link" href="barbell.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/barbell.jpg" alt="Barbell Monitoring" data-i18n-alt="features.barbell.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.posture.title">AI Smart Posture Assessment</h2>
+                    <p data-i18n="features.posture.text">Take a photo to receive a detailed quantitative posture report that accurately identifies posture abnormalities.</p>
+                    <a class="story-link" href="posture.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/posture.jpg" alt="Posture Assessment" data-i18n-alt="features.posture.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.sprint.title">100m Sprint Split Timing</h2>
+                    <p data-i18n="features.sprint.text">Automatically record start, drive, and sprint phases, clearly breaking down speed changes and room for improvement in each segment.</p>
+                    <a class="story-link" href="sprint.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/sprint.jpg" alt="100m Sprint Split Timing" data-i18n-alt="features.sprint.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.plan.title">AI-Generated Personalized Training Plans</h2>
+                    <p data-i18n="features.plan.text">Combine test data, training goals, and recovery status to intelligently generate phased training plans that fit each athlete's rhythm.</p>
+                    <a class="story-link" href="plan.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/AIplan.jpg" alt="AI Personalized Training Plans" data-i18n-alt="features.plan.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.fitness.title">Sport-Specific Fitness Testing and Assessment</h2>
+                    <p data-i18n="features.fitness.text">Digitally track general and sport-specific fitness from every angle, making each hard-earned improvement visible.</p>
+                    <a class="story-link" href="fitness.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/fitness.jpg" alt="Fitness Assessment" data-i18n-alt="features.fitness.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.deficit.title">Strength Deficit Analysis</h2>
+                    <p data-i18n="features.deficit.text">Calculate eccentric utilization ratio (EUR) and dynamic strength index (DSI) to quantify strength gaps and guide targeted training.</p>
+                    <a class="story-link" href="deficit.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/deficit.jpg" alt="Strength Deficit" data-i18n-alt="features.deficit.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.fatigue.title">Sports Fatigue Monitoring</h2>
+                    <p data-i18n="features.fatigue.text">Identify nervous system and skeletal muscle fatigue through multidimensional data, helping adjust training load and prevent injuries.</p>
+                    <a class="story-link" href="fatigue.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/fatigue.jpg" alt="Fatigue Monitoring" data-i18n-alt="features.fatigue.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.trend.title">Trend Analysis</h2>
+                    <p data-i18n="features.trend.text">Track performance trends across dimensions and use periodic curves to identify breakthroughs and plateaus clearly.</p>
+                    <a class="story-link" href="trend.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/trend.jpg" alt="Trend Analysis" data-i18n-alt="features.trend.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.coach.title">Professional Coach Mode</h2>
+                    <p data-i18n="features.coach.text">Support multi-athlete management, monitor team status in real time, and bring scientific coaching into a digital workflow.</p>
+                    <a class="story-link" href="coach.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/coach.jpg" alt="Coach Mode" data-i18n-alt="features.coach.alt">
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story-inner">
+                <div class="story-copy">
+                    <h2 data-i18n="features.report.title">One-Tap Report Generation</h2>
+                    <p data-i18n="features.report.text">Quickly export test records and professional performance reports, shareable as PDFs to improve communication efficiency.</p>
+                    <a class="story-link" href="report.html" data-i18n="nav.learn">Learn more</a>
+                </div>
+                <div class="story-media">
+                    <img src="assets/report.jpg" alt="Report Generation" data-i18n-alt="features.report.alt">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="download-band">
+        <div class="container">
+            <h2 data-i18n="science.title">Hardcore Technology for Smarter Training</h2>
+            <a class="btn btn-primary btn-large" href="https://apps.apple.com/app/id6754246554" data-i18n="nav.download">Download</a>
         </div>
     </section>
 
-    <section id="science" class="science section bg-light">
-        <div class="container science-content">
-            <div class="science-text">
-                <h2 class="section-title" data-i18n="science.title">Hardcore Technology for Smarter Training</h2>
-                <p data-i18n="science.text">Athlimate combines computer vision with sports biomechanics algorithms. With only a phone, it automatically recognizes the body and equipment, completes fitness tests quickly, and generates personalized training plans, making once-expensive lab-level testing available anytime, anywhere.</p>
-            </div>
-            <div class="science-image">
-                <img src="assets/hero-bg.jpg" alt="AI Tracking Demo" class="img-responsive rounded-lg shadow-xl" data-i18n-alt="science.alt">
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Athlimate</div>
-                <div class="footer-links">
-                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
-                    <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
-                    <a href="member-service-agreement.html" data-i18n="footer.member">Member Service Agreement</a>
-                    <a href="mailto:qjspot@163.com" data-i18n="footer.contact">Contact Us</a>
-                </div>
-            </div>
-            <p class="copyright">&copy; 2026 Athlimate Team. All rights reserved.</p>
-            <p class="icp-info"><a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2025196059号-1</a></p>
-        </div>
-    </footer>
-
+    <div id="site-footer"></div>
     <script src="main.js"></script>
 </body>
 

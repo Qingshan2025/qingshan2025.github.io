@@ -5,9 +5,21 @@ const translations = {
             description: 'Athlimate is an AI sports performance analysis tool for athletes and coaches, offering jump testing, VBT barbell monitoring, posture assessment, and more for smarter training.'
         },
         nav: {
-            features: 'Features',
-            science: 'Science',
-            about: 'About'
+            jump: 'Jump',
+            barbell: 'Barbell',
+            sprint: 'Sprint',
+            coach: 'Coach',
+            more: 'More',
+            posture: 'Posture',
+            plan: 'Plans',
+            fitness: 'Fitness',
+            deficit: 'Deficit',
+            fatigue: 'Fatigue',
+            trend: 'Trends',
+            report: 'Reports',
+            download: 'Download',
+            learn: 'Learn more',
+            menu: 'Menu'
         },
         language: {
             label: 'Language'
@@ -79,6 +91,9 @@ const translations = {
             alt: 'AI Tracking Demo'
         },
         footer: {
+            tests: 'Tests',
+            analysis: 'Analysis',
+            about: 'About',
             privacy: 'Privacy Policy',
             terms: 'Terms of Service',
             member: 'Member Service Agreement',
@@ -91,9 +106,21 @@ const translations = {
             description: 'Athlimate 是一款专为运动员和教练打造的 AI 运动表现分析工具，提供跳跃测试、VBT杠铃监测、体态评估等核心功能，助力科学训练。'
         },
         nav: {
-            features: '功能',
-            science: '科学',
-            about: '关于'
+            jump: '跳跃',
+            barbell: '杠铃',
+            sprint: '短跑',
+            coach: '教练',
+            more: '更多',
+            posture: '体态',
+            plan: '计划',
+            fitness: '体能',
+            deficit: '赤字',
+            fatigue: '疲劳',
+            trend: '趋势',
+            report: '报告',
+            download: '下载 App',
+            learn: '了解这项功能',
+            menu: '菜单'
         },
         language: {
             label: '语言'
@@ -165,6 +192,9 @@ const translations = {
             alt: 'AI Tracking Demo'
         },
         footer: {
+            tests: '测试',
+            analysis: '分析',
+            about: '关于',
             privacy: '隐私政策',
             terms: '服务协议',
             member: '会员服务协议',
@@ -177,9 +207,21 @@ const translations = {
             description: 'Athlimate es una herramienta de análisis del rendimiento deportivo con IA para atletas y entrenadores, con pruebas de salto, monitoreo de barra VBT, evaluación postural y más.'
         },
         nav: {
-            features: 'Funciones',
-            science: 'Ciencia',
-            about: 'Acerca de'
+            jump: 'Salto',
+            barbell: 'Barra',
+            sprint: 'Sprint',
+            coach: 'Entrenador',
+            more: 'Más',
+            posture: 'Postura',
+            plan: 'Planes',
+            fitness: 'Condición',
+            deficit: 'Déficit',
+            fatigue: 'Fatiga',
+            trend: 'Tendencias',
+            report: 'Informes',
+            download: 'Descargar',
+            learn: 'Ver esta función',
+            menu: 'Menú'
         },
         language: {
             label: 'Idioma'
@@ -251,6 +293,9 @@ const translations = {
             alt: 'Demostración de seguimiento con IA'
         },
         footer: {
+            tests: 'Pruebas',
+            analysis: 'Análisis',
+            about: 'Acerca de',
             privacy: 'Política de privacidad',
             terms: 'Términos de servicio',
             member: 'Acuerdo de servicio para miembros',
@@ -263,9 +308,21 @@ const translations = {
             description: 'Athlimateは、アスリートとコーチのためのAIスポーツパフォーマンス分析ツールです。ジャンプテスト、VBTバーベル計測、姿勢評価などを提供します。'
         },
         nav: {
-            features: '機能',
-            science: '科学',
-            about: '概要'
+            jump: 'ジャンプ',
+            barbell: 'バーベル',
+            sprint: 'スプリント',
+            coach: 'コーチ',
+            more: 'その他',
+            posture: '姿勢',
+            plan: 'プラン',
+            fitness: '体力',
+            deficit: '筋力不足',
+            fatigue: '疲労',
+            trend: 'トレンド',
+            report: 'レポート',
+            download: 'ダウンロード',
+            learn: 'この機能を見る',
+            menu: 'メニュー'
         },
         language: {
             label: '言語'
@@ -337,6 +394,9 @@ const translations = {
             alt: 'AIトラッキングデモ'
         },
         footer: {
+            tests: 'テスト',
+            analysis: '分析',
+            about: '概要',
             privacy: 'プライバシーポリシー',
             terms: '利用規約',
             member: '会員サービス規約',
@@ -349,9 +409,21 @@ const translations = {
             description: 'Athlimate는 선수와 코치를 위한 AI 스포츠 퍼포먼스 분석 도구로, 점프 테스트, VBT 바벨 모니터링, 자세 평가 등 핵심 기능을 제공합니다.'
         },
         nav: {
-            features: '기능',
-            science: '과학',
-            about: '소개'
+            jump: '점프',
+            barbell: '바벨',
+            sprint: '스프린트',
+            coach: '코치',
+            more: '더보기',
+            posture: '자세',
+            plan: '계획',
+            fitness: '체력',
+            deficit: '결손',
+            fatigue: '피로',
+            trend: '트렌드',
+            report: '보고서',
+            download: '다운로드',
+            learn: '이 기능 보기',
+            menu: '메뉴'
         },
         language: {
             label: '언어'
@@ -423,6 +495,9 @@ const translations = {
             alt: 'AI 트래킹 데모'
         },
         footer: {
+            tests: '테스트',
+            analysis: '분석',
+            about: '소개',
             privacy: '개인정보 처리방침',
             terms: '서비스 약관',
             member: '회원 서비스 약관',
@@ -459,41 +534,144 @@ function saveLanguage(language) {
     }
 }
 
-const DESKTOP_BREAKPOINT = 769;
-const HERO_TITLE_MAX_FONT = 46;
-const HERO_TITLE_MIN_FONT = 18;
+const APP_STORE_URL = 'https://apps.apple.com/app/id6754246554';
 
-function fitHeroTitle() {
-    const heroTitle = document.querySelector('.hero h1');
-    const heroContent = document.querySelector('.hero-content');
+const PRIMARY_NAV = [
+    ['jump', 'jump.html', 'nav.jump'],
+    ['barbell', 'barbell.html', 'nav.barbell'],
+    ['sprint', 'sprint.html', 'nav.sprint'],
+    ['coach', 'coach.html', 'nav.coach']
+];
 
-    if (!heroTitle || !heroContent) {
-        return;
+const MORE_NAV = [
+    ['posture', 'posture.html', 'nav.posture'],
+    ['plan', 'plan.html', 'nav.plan'],
+    ['fitness', 'fitness.html', 'nav.fitness'],
+    ['deficit', 'deficit.html', 'nav.deficit'],
+    ['fatigue', 'fatigue.html', 'nav.fatigue'],
+    ['trend', 'trend.html', 'nav.trend'],
+    ['report', 'report.html', 'nav.report']
+];
+
+function label(key) {
+    return getTranslation('en', key);
+}
+
+function navAnchor(item) {
+    const [id, href, key] = item;
+    const active = document.body.dataset.page === id;
+
+    return `<a class="nav-link${active ? ' is-active' : ''}" href="${href}" data-nav="${id}" data-i18n="${key}"${active ? ' aria-current="page"' : ''}>${label(key)}</a>`;
+}
+
+function footerAnchor(item) {
+    const [, href, key] = item;
+    return `<a href="${href}" data-i18n="${key}">${label(key)}</a>`;
+}
+
+function renderShell() {
+    const nav = document.getElementById('site-nav');
+    const footer = document.getElementById('site-footer');
+    const moreActive = MORE_NAV.some(([id]) => id === document.body.dataset.page);
+
+    if (nav) {
+        nav.innerHTML = `
+            <nav class="navbar" id="navbar">
+                <div class="container nav-bar">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo1024.png" alt="Athlimate" class="nav-logo">
+                        Athlimate
+                    </a>
+                    <div class="nav-links" id="nav-links">
+                        ${PRIMARY_NAV.map(navAnchor).join('')}
+                        <div class="nav-more${moreActive ? ' is-active' : ''}">
+                            <button type="button" class="nav-more-btn" aria-expanded="false" aria-controls="more-menu">
+                                <span data-i18n="nav.more">${label('nav.more')}</span>
+                            </button>
+                            <div class="nav-more-menu" id="more-menu">
+                                ${MORE_NAV.map(navAnchor).join('')}
+                            </div>
+                        </div>
+                        <a class="btn btn-primary nav-download" href="${APP_STORE_URL}" data-i18n="nav.download">${label('nav.download')}</a>
+                    </div>
+                    <div class="navbar-actions">
+                        <a class="btn btn-primary nav-download" href="${APP_STORE_URL}" data-i18n="nav.download">${label('nav.download')}</a>
+                        <button type="button" class="menu-toggle" id="mobile-menu" aria-expanded="false" data-i18n-aria="nav.menu" aria-label="${label('nav.menu')}">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>`;
     }
 
-    if (window.innerWidth < DESKTOP_BREAKPOINT) {
-        heroTitle.style.fontSize = '';
-        return;
-    }
-
-    heroTitle.style.fontSize = `${HERO_TITLE_MAX_FONT}px`;
-
-    let fontSize = HERO_TITLE_MAX_FONT;
-    while (heroTitle.scrollWidth > heroContent.clientWidth && fontSize > HERO_TITLE_MIN_FONT) {
-        fontSize -= 1;
-        heroTitle.style.fontSize = `${fontSize}px`;
+    if (footer) {
+        footer.innerHTML = `
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div>
+                            <div class="footer-logo">Athlimate</div>
+                            <p class="footer-tagline" data-i18n="hero.title">${label('hero.title')}</p>
+                        </div>
+                        <nav class="footer-col" aria-labelledby="footer-tests">
+                            <h2 id="footer-tests" data-i18n="footer.tests">${label('footer.tests')}</h2>
+                            ${PRIMARY_NAV.map(footerAnchor).join('')}
+                        </nav>
+                        <nav class="footer-col" aria-labelledby="footer-analysis">
+                            <h2 id="footer-analysis" data-i18n="footer.analysis">${label('footer.analysis')}</h2>
+                            ${MORE_NAV.map(footerAnchor).join('')}
+                        </nav>
+                        <nav class="footer-col" aria-labelledby="footer-about">
+                            <h2 id="footer-about" data-i18n="footer.about">${label('footer.about')}</h2>
+                            <a href="privacy.html" data-i18n="footer.privacy">${label('footer.privacy')}</a>
+                            <a href="terms.html" data-i18n="footer.terms">${label('footer.terms')}</a>
+                            <a href="member-service-agreement.html" data-i18n="footer.member">${label('footer.member')}</a>
+                            <a href="mailto:athlimate@gmail.com" data-i18n="footer.contact">${label('footer.contact')}</a>
+                        </nav>
+                    </div>
+                    <div class="footer-bottom">
+                        <div>
+                            <p class="copyright">&copy; 2026 Athlimate Team. All rights reserved.</p>
+                            <p class="icp-info" hidden><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鲁ICP备2025196059号-1</a></p>
+                        </div>
+                        <label class="language-switcher" for="language-select">
+                            <span class="visually-hidden" data-i18n="language.label">${label('language.label')}</span>
+                            <select id="language-select" data-i18n-aria="language.label" aria-label="${label('language.label')}">
+                                <option value="en">English</option>
+                                <option value="zh">中文</option>
+                                <option value="es">Español</option>
+                                <option value="ja">日本語</option>
+                                <option value="ko">한국어</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </footer>`;
     }
 }
 
 function applyLanguage(language) {
     const selectedLanguage = translations[language] ? language : 'en';
     const metaDescription = document.querySelector('meta[name="description"]');
+    const page = document.body.dataset.page;
+    const feature = page && translations[selectedLanguage].features[page];
 
     document.documentElement.lang = languageMap[selectedLanguage];
-    document.title = translations[selectedLanguage].meta.title;
 
-    if (metaDescription) {
-        metaDescription.setAttribute('content', translations[selectedLanguage].meta.description);
+    if (!document.body.hasAttribute('data-keep-title')) {
+        if (feature && feature.title) {
+            document.title = `${feature.title} - Athlimate`;
+            if (metaDescription) {
+                metaDescription.setAttribute('content', feature.text);
+            }
+        } else {
+            document.title = translations[selectedLanguage].meta.title;
+            if (metaDescription) {
+                metaDescription.setAttribute('content', translations[selectedLanguage].meta.description);
+            }
+        }
     }
 
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -512,92 +690,81 @@ function applyLanguage(language) {
         }
     });
 
-    saveLanguage(selectedLanguage);
-    requestAnimationFrame(fitHeroTitle);
-}
+    document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+        const translatedText = getTranslation(selectedLanguage, element.dataset.i18nAria);
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.getElementById('navbar');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-    const languageSelect = document.getElementById('language-select');
-
-    if (languageSelect) {
-        const savedLanguage = getSavedLanguage() || 'en';
-        const updateLanguage = () => applyLanguage(languageSelect.value);
-
-        languageSelect.value = translations[savedLanguage] ? savedLanguage : 'en';
-        applyLanguage(languageSelect.value);
-
-        languageSelect.addEventListener('change', updateLanguage);
-        languageSelect.addEventListener('input', updateLanguage);
-    }
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.8)';
-            navbar.style.boxShadow = 'none';
+        if (translatedText) {
+            element.setAttribute('aria-label', translatedText);
         }
     });
 
-    // Mobile menu toggle (Basic implementation)
-    if (mobileMenu) {
+    const icpInfo = document.querySelector('.icp-info');
+    if (icpInfo) {
+        icpInfo.hidden = selectedLanguage !== 'zh';
+    }
+
+    saveLanguage(selectedLanguage);
+}
+
+function bindShell() {
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.getElementById('nav-links');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const more = document.querySelector('.nav-more');
+    const moreButton = document.querySelector('.nav-more-btn');
+
+    if (navbar) {
+        const syncNavbar = () => navbar.classList.toggle('is-scrolled', window.scrollY > 8);
+        window.addEventListener('scroll', syncNavbar, { passive: true });
+        syncNavbar();
+    }
+
+    if (mobileMenu && navLinks) {
         mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenu.classList.toggle('is-active');
+            const open = navLinks.classList.toggle('is-open');
+            mobileMenu.setAttribute('aria-expanded', String(open));
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('is-open');
+                mobileMenu.setAttribute('aria-expanded', 'false');
+            });
         });
     }
 
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const navHeight = navbar.offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+    if (more && moreButton) {
+        moreButton.addEventListener('click', () => {
+            const open = more.classList.toggle('is-open');
+            moreButton.setAttribute('aria-expanded', String(open));
         });
-    });
-
-    // Simple Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.feature-card, .science-content').forEach(el => {
-        observer.observe(el);
-    });
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(fitHeroTitle, 100);
-    });
-
-    if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(fitHeroTitle);
     }
 
-    window.addEventListener('load', fitHeroTitle);
+    document.addEventListener('keydown', event => {
+        if (event.key !== 'Escape') {
+            return;
+        }
+
+        navLinks?.classList.remove('is-open');
+        mobileMenu?.setAttribute('aria-expanded', 'false');
+        more?.classList.remove('is-open');
+        moreButton?.setAttribute('aria-expanded', 'false');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderShell();
+    bindShell();
+
+    const languageSelect = document.getElementById('language-select');
+    if (!languageSelect) {
+        return;
+    }
+
+    const savedLanguage = getSavedLanguage() || 'en';
+    const updateLanguage = () => applyLanguage(languageSelect.value);
+
+    languageSelect.value = translations[savedLanguage] ? savedLanguage : 'en';
+    applyLanguage(languageSelect.value);
+    languageSelect.addEventListener('change', updateLanguage);
 });
