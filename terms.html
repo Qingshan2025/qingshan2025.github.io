@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Athlimate</title>
+    <meta name="description" content="Athlimate Terms of Service. Learn about our terms and your rights and obligations.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body data-keep-title>
+    <div id="site-nav"></div>
+
+    <main class="policy-page">
+        <div class="container">
+            <div id="content" class="markdown-body">
+                Loading the terms of service...
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="main.js"></script>
+    <script>
+        loadLegalDocument('UserAgreement.en.md', 'Loading the terms of service...', 'Unable to load the terms of service.');
+
+        async function loadLegalDocument(file, loadingText, failureText) {
+            const content = document.getElementById('content');
+            content.textContent = loadingText;
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error('missing');
+                content.innerHTML = marked.parse(await response.text());
+            } catch (err) {
+                content.textContent = failureText;
+                console.error(err);
+            }
+        }
+    </script>
+</body>
+
+</html>

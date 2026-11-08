@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "94HQ8ZD896.tech.quanjia.athlimate.app",
+        "paths": [
+          "/invite.html",
+          "/invite.html/*"
+        ]
+      }
+    ]
+  }
+}
